@@ -1,0 +1,5 @@
+venv/
+artificats/
+logs/
+mlproject.egg-info/
+.ipynb_checkpoints/
