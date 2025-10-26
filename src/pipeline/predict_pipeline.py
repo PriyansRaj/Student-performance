@@ -8,8 +8,8 @@ class PredictPipeline:
         pass
     def predict(self,features):
         try:
-            model_path = "/home/eru/Ml-project/project-1/artifacts/model.pkl"
-            preprocessor_path = "/home/eru/Ml-project/project-1/artifacts/preprocessor.pkl"
+            model_path = "C:\\Users\\eru33\\Documents\\Student-performance\\artifacts\\model.pkl"
+            preprocessor_path = "C:\\Users\\eru33\\Documents\\Student-performance\\artifacts\\preprocessor.pkl"
             model = load_object(model_path)
             preprocessor = load_object(preprocessor_path)
             data_scaled = preprocessor.transform(features)

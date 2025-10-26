@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 from src.logger import logging
+import math
 
 app = Flask(__name__)
 
@@ -34,7 +35,7 @@ def predict():
         predict_pipe = PredictPipeline()
         output = predict_pipe.predict(df)
         
-        return render_template("home.html", results=output[0])
+        return render_template("home.html", results=math.floor(output[0]))
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
